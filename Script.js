@@ -339,7 +339,7 @@ if (params.get('kick-the-joiner') || false) {
   $('.kick-the-joiner.checkbox').checkbox('check');
 }
 
-if (params.get('rejoin') || false) {
+if (params.get('sikis') || false) {
   $('.rejoin.checkbox').checkbox('check');
 }
 
@@ -402,7 +402,7 @@ document.querySelector("#upload").addEventListener("click", function () {
     position: 'topRight',
     //theme: 'dark',	
     title: 'Successful',
-    message: 'The İmage Has Been Uploaded.',
+    message: 'Fotograf Yuklendi.',
   });
 });
 
@@ -745,7 +745,7 @@ function createLabels() {
         position: 'topRight',
         //theme: 'dark',
         title: 'Not Added',
-        message: `${inputVal} is Already in The List!`
+        message: `${inputVal} bir ipyi iki kere koyamassin!`
       });
       return;
     }
@@ -755,7 +755,7 @@ function createLabels() {
         position: 'topRight',
         //theme: 'dark',
         title: 'Not Added',
-        message: `You Cannot Add an Empty Username!`
+        message: `Bos Mesaj Yazma amk!`
       });
       return;
     }
@@ -796,9 +796,9 @@ window.addEventListener("popstate", createLabels);
 
 
 let subjects = {
-  0: "Others / Generic",
+  0: "Orospu Evladlari",
   1: "General",
-  28: "Animes",
+  28: "Amk Animeleri",
   2: "Animals",
   3: "Objects",
   4: "Foods",
@@ -826,7 +826,7 @@ let subjects = {
   26: "Logos",
   27: "Bands",
   29: "Sports",
-  30: "Others / Generic",
+  30: "Mal Oclar",
   31: "Minecraft",
   32: "Fortnite",
   33: "FNAF",
@@ -1113,7 +1113,7 @@ function waitRandomSeconds() {
     position: 'topRight',
     //theme: 'dark',
     title: 'Waiting',
-    message: `Next bot Will Join After Randomly Selected ${randomSeconds} Seconds.`
+    message: `Random Kunai Firlatiliyor ${randomSeconds} Seconds.`
   });
 
   lastRandomSeconds = randomSeconds;
@@ -1178,7 +1178,7 @@ async function addBot(botAmount) {
           const regex = /\b[aAá]\.?([lLℓᎥiI]\.?){2}[hH𝔥ʜ]*[\W_]*[aAá]\.?([lLℓᏂhH𝔥ʜ]*[\W_]*){1,2}\b|\b(?:[^\w\s]*[aAá][^\w\s]*){2,}|\b[ᴬaAá][ˡlL1Ii][ᴸlL1Ii]?[ᴬaAá][ℍhH](?:\W*[\/\*\-+.,:;]\W*)*[^\W_]*|\b[hH][ℑℎhHℏ𝕙𝖍𝗁][𝖺aáA𝗮𝘢ⓗ𝐡][𝛂𝛼áaAá𝒶𝓪𝔞𝕒]+(?:\W*[\/\*\-+.,:;]\W*)*[^\W_]*[lLℓIi][^w\s]*[lLℓIi](?:\W*[\/\*\-+.,:;]\W*)*[^\W_]*[aAá][^\w\s]*[hH][ℑℎhHℏ𝕙𝖍𝗁][𝖺aáA𝗮𝘢ⓗ𝐡][𝛂𝛼aáAá𝒶𝓪𝔞𝕒]+(?:\W*[\/\*\-+.,:;]\W*)*[^\W_]*\b|Yahve|İsa|İsa Mesih|Yahweh|Jesus|Jesus Christ|Yahv[eéèêë]|İs[aáàâä]|İs[aáàâä] Mes[iíìîï]h|Yahw[eéèêë]h|Jes[uúùûü]s|Jes[uúùûü]s Chr[iíìîï]st|Yahve|İsa|İsa Mesih|Yahweh|Jesus|Jesus Christ|Yahv[eéèêë]|İs[aáàâä] Mes[iíìîï]h|Yahw[eéèêë]h|Jes[uúùûü]s Chr[iíìîï]st|Yahve|İsa|İsa Mesih|Yahweh|İsa|Jesus Christ|Yahv[eéèêë]|İs[aáàâä] Mes[iíìîï]h|Yahw[eéèêë]h|Jes[uúùûü]s Chr[iíìîï]st|(?:\W*[\/\*\-+.,:;]\W*)*Y(?:\W*[\/\*\-+.,:;]\W*)*a(?:\W*[\/\*\-+.,:;]\W*)*h(?:\W*[\/\*\-+.,:;]\W*)*v(?:\W*[\/\*\-+.,:;]\W*)*e|(?:\W*[\/\*\-+.,:;]\W*)*İ(?:\W*[\/\*\-+.,:;]\W*)*\b/gi;
 
           if (regex.test(username)) {
-            document.querySelector('#botname div input').value = "iolite";
+            document.querySelector('#botname div input').value = "adolfilah";
             username = "";
           }
         }
@@ -1248,7 +1248,7 @@ async function addBot(botAmount) {
           position: 'topRight',
           //theme: 'dark',	
           title: 'Error',
-          message: 'You Need to Add a Proxy First.',
+          message: 'İlk olarak ip alman gerek.',
         });
       }
     } else {
@@ -1311,13 +1311,13 @@ async function addBot(botAmount) {
           socket.players = data[5]; // players'i soket nesnesine kaydet
           socket.isRoom = true;
           socket.send(`42[46,${playerId}]`);
-          if (params.get('private-mode') !== "true") { socket.send(`42[11,"${playerId}",Kenji Rakipsiz"]`); }
+          if (params.get('random-isim') !== "true") { socket.send(`42[11,"${playerId}",KenjiRakipsiz"]`); }
           updateUserList(data[5]);
           iziToast.info({
             position: 'topRight',
             //theme: 'dark',
             title: 'Joined',
-            message: `WebSocket ${i} Joined the Server.`
+            message: `WebSocket ${i} Kunai Firlatildi.`
           });
           break;
         }
